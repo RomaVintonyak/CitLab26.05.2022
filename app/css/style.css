@@ -694,3 +694,98 @@ a:focus {
     opacity: 1;
     visibility: visible;
 }
+
+/*news*/
+.news__title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.news__title h2 {
+    margin-left: -9rem;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.6rem;
+    line-height: 66px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #585959;
+}
+
+.news__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.news__card {
+    background-color: #d9d9d9;
+    width: 32%;
+    margin-bottom: 4.5rem;
+    height: 55rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news__card img {
+    margin-top: 40%;
+}
+
+.card__body {
+    background: rgba(148, 159, 163, 0.6);
+    padding: 2.5rem 1.5rem;
+}
+
+.card__body p {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 28px;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.card__body a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #585959;
+}
+
+.btn__block {
+    margin-bottom: 4rem;
+}
+
+.news__btn {
+    background: rgba(148, 159, 163, 0.75);
+    border-radius: 50px;
+    border: none;
+    padding: 2.6rem 2.3rem;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #585959;
+    transition: background 0.2s linear;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.news__btn:hover {
+    cursor: pointer;
+    background: rgba(148, 159, 163, 0.4);
+}
+
+.news__btn--active {
+    visibility: visible;
+    opacity: 1;
+}

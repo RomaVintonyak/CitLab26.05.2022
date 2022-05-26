@@ -1,3 +1,85 @@
 //*mixins*//
 @import "./mixin.scss";
 
+.news__title {
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   h2 {
+      margin-left: -9rem;
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 5.6rem;
+      line-height: 66px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #585959;
+   }
+}
+.news__block {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   flex-wrap: wrap;
+}
+.news__card {
+   background-color: #d9d9d9;
+   width: 32%;
+   margin-bottom: 4.5rem;
+   height: 55rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   img {
+      margin-top: 40%;
+   }
+}
+.card__body {
+   background: rgba(148, 159, 163, 0.6);
+   padding: 2.5rem 1.5rem;
+   p {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 28px;
+      color: $white;
+      margin-bottom: 1.5rem;
+   }
+   a {
+      text-decoration: none;
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #585959;
+   }
+}
+.btn__block {
+   margin-bottom: 4rem;
+}
+.news__btn {
+   background: rgba(148, 159, 163, 0.75);
+   border-radius: 50px;
+   border: none;
+   padding: 2.6rem 2.3rem;
+   font-family: $mainFont;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 2rem;
+   color: #585959;
+   transition: background 0.2s linear;
+   visibility: hidden;
+   opacity: 0;
+   &:hover{
+      cursor: pointer;
+      background: rgba(148, 159, 163, 0.4);
+   }
+   &--active{
+      visibility: visible;
+      opacity: 1;
+   }
+}
