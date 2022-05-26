@@ -16,6 +16,15 @@
       letter-spacing: 0.07em;
       text-transform: uppercase;
       color: #585959;
+      @include tablet{
+         font-size: 4.6rem;
+      }
+      @include mobile{
+         font-size: 3.6rem;
+      }
+      @include mobile-sm{
+         font-size: 2.6rem;
+      }
    }
 }
 .news__block {
@@ -23,6 +32,9 @@
    justify-content: space-between;
    align-items: flex-start;
    flex-wrap: wrap;
+   @include mobile{
+      justify-content: center;
+   }
 }
 .news__card {
    background-color: #d9d9d9;
@@ -36,6 +48,18 @@
    img {
       margin-top: 40%;
    }
+   @include notebook{
+      height: 50rem;
+   }
+   @include tablet{
+      width: 48%;
+   }
+   @include mobile{
+      width: 75%;
+   }
+   @include mobile-sm{
+      width: 100%;
+   }
 }
 .card__body {
    background: rgba(148, 159, 163, 0.6);
@@ -48,6 +72,9 @@
       line-height: 28px;
       color: $white;
       margin-bottom: 1.5rem;
+      @include mobile-sm{
+         font-size: 1.8rem;
+      }
    }
    a {
       text-decoration: none;
@@ -56,6 +83,9 @@
       font-weight: 700;
       font-size: 2rem;
       color: #585959;
+      @include mobile-sm{
+         font-size: 1.8rem;
+      }
    }
 }
 .btn__block {

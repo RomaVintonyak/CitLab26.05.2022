@@ -5,6 +5,13 @@ jQuery(document).ready(function () {
   burgerBtn.on("click", function (event) {
     event.preventDefault();
     $(this).toggleClass("burgerBtn--active");
+    $(".nav__menu").toggleClass("nav__menu--open");
+    if ($(".nav__menu").hasClass("nav__menu--open")) {
+      $("html, body").css({ "overflow": "hidden" });
+    } else {
+      $("html, body").css({ "overflow": "scroll" });
+      $("html, body").removeAttr("style");
+    }
   });
   /*post block*/
   var dropDownBtn = $(".drop__down--header");

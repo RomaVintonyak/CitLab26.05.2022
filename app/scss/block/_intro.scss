@@ -6,6 +6,15 @@
    background-color: $silver;
    padding-top: 17rem;
    padding-bottom: 6rem;
+   @include tablet{
+      padding-top: 10rem;
+   }
+   @include mobile{
+      padding-top: 8rem;
+   }
+   @include mobile-sm{
+      padding-top: 6rem;
+   }
 }
 .intro__row {
    width: 100%;
@@ -22,12 +31,38 @@
       font-size: 2.4rem;
       line-height: 28px;
       color: $white;
+      @include notebook{
+         width: 80%;
+      }
+      @include tablet{
+         width: 100%;
+         font-size: 2rem;
+      }
+      @include mobile{
+         font-size: 1.8rem;
+      }
+   }
+   @include notebook{
+      width: 65%;
+      position: relative;
+      z-index: 3;
+
+   }
+   @include tablet{
+      width: 100%;
    }
 }
 .intro__img{
    position: absolute;
+   z-index: 1;
    right: 20%;
    bottom: 10%;
+   @include notebook{
+      right: 10%;
+   }
+   @include tablet{
+      right: 2%;
+   }
 }
 .main__title {
    width: 90%;
@@ -40,4 +75,14 @@
    text-transform: uppercase;
    color: #feffff;
    margin-bottom: 3rem;
+   @include notebook{
+      font-size: 4rem;
+   }
+   @include tablet{
+      width: 100%;
+      font-size: 3.5rem;
+   }
+   @include mobile{
+      font-size: 2rem;
+   }
 }
