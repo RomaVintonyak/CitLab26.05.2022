@@ -1,0 +1,195 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.team__title {
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   h2 {
+      margin-right: -9rem;
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 5.6rem;
+      line-height: 66px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #585959;
+   }
+}
+.post__row {
+   width: 100%;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+.post__coll {
+   flex-basis: 48%;
+   position: relative;
+   margin-bottom: 8rem;
+   &--title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 115px;
+      width: 100%;
+      margin-bottom: 4rem;
+      img {
+         margin-right: 4rem;
+         @include mobile-sm {
+            margin-right: 1.5rem;
+         }
+      }
+      h3 {
+         font-family: $mainFont;
+         font-style: normal;
+         font-weight: 700;
+         font-size: 3.4rem;
+         text-transform: uppercase;
+
+         color: #585959;
+         position: relative;
+         &:after {
+            content: "";
+            position: absolute;
+            bottom: -1.6rem;
+            left: 0;
+            width: 95px;
+            height: 1.5px;
+            background-color: #bcc5c9;
+         }
+         @include mobile-sm {
+            font-size: 2rem;
+         }
+      }
+   }
+   h6 {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.8rem;
+
+      color: #949fa3;
+      margin-bottom: 2.8rem;
+      @include mobile-sm {
+         font-size: 1.6rem;
+      }
+   }
+   hr {
+      background-color: #dde0e2;
+      margin-block-end: 0;
+      margin-block-start: 0;
+   }
+   @include tablet {
+      flex-basis: 100%;
+   }
+}
+.drop__down {
+   margin-top: 1.8rem;
+   position: relative;
+   z-index: 1;
+   &--header {
+      position: relative;
+      &:hover {
+         cursor: pointer;
+      }
+   }
+   &--list {
+      opacity: 0;
+      visibility: hidden;
+      height: 9.5rem;
+      transition: opacity 0.4s linear, visibility 0.4s linear;
+      width: 50%;
+      text-align: left;
+      position: absolute;
+      left: 2rem;
+      bottom: -11.5rem;
+      z-index: 5;
+      padding: 0.5rem;
+      background-color: $white;
+      p {
+         font-family: $mainFont;
+         font-style: normal;
+         font-weight: 700;
+         font-size: 2.4rem;
+         color: #949fa3;
+         transition: background-color 0.2s linear;
+         &:hover {
+            cursor: pointer;
+            background-color: rgba($silver, 0.25);
+         }
+      }
+      @include notebook {
+         width: 60%;
+      }
+   }
+}
+.header__close {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   opacity: 1;
+   visibility: visible;
+   transition: opacity 0.2s linear, visibility 0.2s linear;
+   h5 {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.5rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #949fa3;
+
+      margin-right: 0.25rem;
+   }
+   span {
+      font-size: 2.5rem;
+      color: #949fa3;
+      margin-top: -0.6rem;
+   }
+}
+.header__open {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.2s linear, visibility 0.2s linear;
+   h5 {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.5rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #949fa3;
+      margin-right: 2rem;
+   }
+   span {
+      font-size: 2.5rem;
+      color: #949fa3;
+      margin-top: -0.6rem;
+   }
+}
+.header--active {
+   .header__close {
+      opacity: 0;
+      visibility: hidden;
+   }
+   .header__open {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+.show__list {
+   opacity: 1;
+   visibility: visible;
+}

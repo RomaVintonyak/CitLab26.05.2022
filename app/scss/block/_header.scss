@@ -1,8 +1,94 @@
 //*mixins*//
 @import "./mixin.scss";
 
-
 /*test block*/
-.header{
-  
+.header {
+  width: 100%;
+  background-color: $silver;
+}
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2% 0 2%;
+}
+.navbar__brand {
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    img {
+      margin-right: 2rem;
+    }
+    p {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+}
+.nav__menu {
+}
+.menu__list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  &--item {
+    margin-right: 7.5rem;
+  }
+  &--link {
+    text-decoration: none;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #feffff;
+  }
+}
+.burgerBtn{
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  background-color: $white;
+  span{
+    height: 2px;
+    width: 3rem;
+    background-color: $silver;
+    position: absolute;
+    left: 1rem;
+    top: calc(2.5rem - 2px);
+    transition: width 0.1s linear, transform 0.2s linear;
+    &:first-child{
+      top: calc(2.5rem - 8px);
+    }
+    &:last-child{
+      top: calc(2.5rem + 4px);
+    }
+  }
+  &:hover{
+    cursor: pointer;
+  }
+  &--active{
+    span{
+      &:first-child{
+        width: 0;
+      }
+      &:nth-child(2){
+        transform: rotate(45deg);
+      }
+      &:nth-child(3){
+        transform: rotate(-45deg);
+      }
+      &:last-child{
+        width: 0;
+      }
+    }
+  }
 }
